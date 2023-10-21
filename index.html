@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Login-wrap-Begin -->
+        <div class="card Tab">
+            <h1>Register</h1>
+            <div class="errorName">
+                <p id="invalidName"></p>
+            </div>
+            <label for="RegisterName">Name</label>
+            <input  required type="text" id="RegisterName" for="Register" placeholder="enter your name" class="">
+            <div class="errorEmail">
+                <p id="invalidEmail"></p>
+            </div>
+            <label for="RegisterEmail">Email</label>
+            <input  required type="email" id="RegisterEmail" for="Register" placeholder="example@gmail.com">
+
+            <div class="btn">
+                <button type="submit" id="pageToggleBtn"
+                    onclick="nextTab(currentTab); InnerRegisterInfo();">Countinue</button>
+            </div>
+            <div class="notification">
+                <p>Step <span id="pageToggle">1</span>of 3</p>
+                <div class="circle">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login-wrap-End -->
+        <!-- topic-wrap-Begin -->
+        <div class="topic-wrap Tab">
+            <h1>Which topics you are interested in?</h1>
+            <div class="topicOptionWrap">
+                <button onclick="TopicAdd()" id="Topic1" type="text" value="Software Development"
+                    class="topic topic1">SoftwareDevelopment</button>
+                <button onclick="TopicAdd()" id="Topic2" type="text" value="User Experience" class="topic topic2">User
+                    Experience</button>
+                <button onclick="TopicAdd()" id="Topic3" type="text" value="Graphic Design" class="topic topic3">Graphic
+                    Design</button>
+                    <p id="TopicLimitInfo" class="TopicLimitInfo"></p>
+            </div>
+            <div class="btn">
+                <!--  -->
+                <button id="pageToggleBtn" onclick="nextTab(currentTab)">Countinue</button>
+            </div>
+            <div class="notification">
+                <p>Step <span id="pageToggle">2</span>of 3</p>
+
+                <div class="circle">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- topic-wrap-End -->
+        <!-- Summary-wrap-Begin-->
+        <div class="summary-wrap Tab">
+            <h2>Summary</h2>
+            <div class="registerContent">
+                <p>Name: <span id="InfoName"></span></p>
+                <p>Email: <span id="InfoEmail"></span></p>
+            </div>
+            <ul class="topicInfoWrap">
+                <h3>Topic:</h3>
+                <li id="InfoTopic1"></li>
+                <li id="InfoTopic2"></li>
+            </ul>
+            <div class="btn">
+                <button id="pageToggleBtn" onclick="nextTab(currentTab)">Countinue</button>
+            </div>
+            <div class="notification">
+                <p>Step <span id="pageToggle">2</span>of 3</p>
+
+                <div class="circle">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Summary-wrap-End-->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Inter: 'Inter', sans-serif;
+    --s: 12px;
+    --sm: 16px;
+    --m: 18px;
+    --mx: 20px;
+}
+body{
+    background-color: #121826;
+}
+.wrapper {
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(blur-radial.svg),url(blur-radial.svg);
+    background-repeat: no-repeat;
+    background-position: -50% -250%,150% 400%;
+    height: 100vh;
+}
+
+.card {
+    position:relative;
+    border:1px solid #A1A1A9; 
+    border-radius: 12px;
+    background-color: #212936;
+    padding: 2em;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    /* display:none;*/
+    /*切換頁面*/
+}
+
+.card .fa-solid {
+    position:absolute;
+    right:1rem;
+    top:3.1em;
+    font-size:14px;
+    line-height: 20px;
+    color:#faa;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f55d3b;
+    text-align: center;
+}
+
+.card>h1 {
+    font-size:36px;
+    color: #fff;
+    margin-bottom: 1em;
+}
+.card > .errorName,
+.card > .errorEmail{
+    position:relative;
+    width: 100%;
+}
+.card > .errorName > p, 
+.card > .errorEmail > p {
+    position:absolute;
+    right:0;
+    color:#ffada2e3
+}
+
+.card label {
+    color: #A1A1A9;
+    margin-bottom: 0.5em;
+}
+.card > .input-wrap{
+    width: 100%;
+}
+.card input {
+    width: 100%;
+    color:#fff;
+    font-weight: 300;
+    appearance: none;
+    border: 2px #4D5562 solid;
+    border-radius: 12px;;
+    padding: 1em;
+    display: block;
+    margin-bottom: 2em;
+    background-color: #212936;
+}
+
+.card input:focus {
+    outline: #845EEE 2px solid;
+}
+
+.card>.btn {
+    margin: auto;
+}
+
+.btn>button {
+    cursor:pointer;
+    color:#fff;
+    font-family: var(--Inter);
+    margin-top: 2em;
+    padding: 1em 2em;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(to bottom, hsla(256, 81%, 65%, 1) 0%, hsla(261, 65%, 50%, 1) 100%);
+}
+
+.notification{  
+    width: 400px;
+    /* background-color: yellow; */
+    margin:0 auto;
+    top: 4em;
+    text-align: center;
+    position: relative;
+    /* display:none;    */
+    /* <---切換頁面 */
+ }
+
+.notification > p {
+    line-height: 25px;
+    position: absolute;
+    margin:auto;
+    font-size:var(--s);
+    color:#A1A1A9;
+    left: 100px;
+}
+
+.circle{
+    display:inline-block;
+    justify-content:space-between;
+    align-items:center;
+}
+.circle div{
+    display:inline-block;
+    background-color: #4D5562;
+    width: 8px;
+    height: 8px;
+    border-radius:50%;
+    margin:0 7px;
+}
+.card .circle div:nth-child(1){
+    padding:4px;
+    outline:#652CD1 4px solid;
+    opacity:0.6;
+    border-radius:50%;
+    width: 8px;
+    height: 8px;
+    background-color: #845EEE;
+}
+
+/* topic-wrpa-begin */
+.topic-wrap > .notification .circle div:nth-child(1){
+    opacity:0.8;
+    border-radius:50%;
+    width: 8px;
+    height: 8px;
+    background-color: #845EEE;
+    outline: 4px solid #845EEE;
+    
+}
+.topic-wrap > .notification .circle div:nth-child(2){
+    padding:4px;
+    outline:#652CD1 6px solid;
+    opacity:0.8;
+    border-radius:50%;
+    width: 8px;
+    height: 8px;
+    background-color: #845EEE;
+}
+
+
+
+.topic-wrap{
+    border:1px solid #A1A1A9; 
+    border-radius: 12px;
+    background-color: #212936;
+    padding: 2em;
+    width: 500px;
+    display:none;
+}
+
+.topic-wrap > h1{
+    font-size:24px;
+    color:#fff;
+    font-weight: 400;
+}
+.topic{
+    width: 100%;
+    text-align: start;
+    color:#A1A1A9;
+    border:1px #A1A1A9 solid;
+    background-color: #4D5562; 
+    margin:1em 0;
+    padding: 1em;
+    border-radius: 12px;
+    cursor:pointer;
+}
+.topicSelectored{
+    color:#fff;
+    border:1px #845EEE solid;
+    background-color: #652CD1; 
+}
+.topic:hover{
+    transition: all 0.3s ease-out;
+    color:#fff;
+    border:1px #845EEE solid;
+    background-color: #652CD1; 
+}
+.topicOptionWrap{
+    position: relative;
+    width: 100%;
+}
+.topicOptionWrap > .TopicLimitInfo {
+    position: absolute;
+    color:#ccc;
+}
+.topic-wrap > .btn{
+    display:flex;
+    justify-content: center;
+}
+/* topic-wrap-End */
+
+/* summary-wrap-begin */
+.summary-wrap{
+    display:none;
+    border:1px solid #A1A1A9;
+    width: 500px;
+    padding:2em;
+    border-radius:12px;
+    background-color: #212936;
+}
+input.invalid{
+    background-color: #ffdddd;
+}
+.summary-wrap > h2 {
+    color:#fff;
+    margin:1em 0;
+    font-size:28px;
+}
+
+.summary-wrap > .registerContent{
+    margin:1em 0;
+}
+.summary-wrap > .registerContent > p{
+    display:block;
+    font-size:18px;
+    color:#4D5562;
+    margin:4px 0;
+}
+.summary-wrap > .registerContent > p span{
+    color:#fff;
+    display:inline-block;
+}
+
+.topicInfoWrap{
+    margin:1em 0;
+}
+
+.topicInfoWrap h3{
+    color:#4D5562;
+}
+
+.topicInfoWrap li{
+    margin-left:1em;
+    color:#fff;
+}
+
+
+.summary-wrap > .btn{
+    display:flex;
+    justify-content:center;
+}
+
+.summary-wrap > .notification .circle div{
+    opacity:0.8;
+    border-radius:50%;
+    width: 8px;
+    height: 8px;
+    background-color: #845EEE;
+    outline: 4px solid #845EEE;
+    
+}
+.summary-wrap > .notification .circle div:nth-child(3){
+    padding:4px;
+    outline:#652CD1 6px solid;
+    opacity:0.8;
+    border-radius:50%;
+    width: 8px;
+    height: 8px;
+    background-color: #845EEE;
+}
+
+/* summary-wrap-end */
