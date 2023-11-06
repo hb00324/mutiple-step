@@ -30,7 +30,7 @@ function nextTab(currentTab) {
 }
 
 function invalidForm() {
-    //此函式讓輸入決定輸入框 是否為invalid; 10.19 做
+    //此函式讓輸入決定輸入框 是否為invalid; 10/19 自己做
     let invalidName = document.getElementById('invalidName'),
         invalidEmail = document.getElementById("invalidEmail");
     let errorIcon = document.getElementsByClassName('fa-solid');
@@ -74,7 +74,7 @@ console.log(TopicArray);
 
 
 function TopicAdd() {
-    const clickButton = event.currentTarget;
+    const clickButton = event.currentTarget; //指定clickButton = 目前有發生事件的目標 
     if (clickButton === Topic1) {
         Topic1.className += " topicSelectored"
         clickCount1++;
@@ -96,9 +96,10 @@ function TopicAdd() {
 console.log(Topic1.classList.value.includes("topic"))
 
 function cacelTopic() {
-    if (Topic1.classList.value.includes("topicSelectored") && clickCount1 %2 === 0 ) {
+    // topic 選項被點擊增加 css style 
+    if (Topic1.classList.value.includes("topicSelectored") && clickCount1 %2 === 0 ) {   //透過點擊次數為偶數來判斷是不是已被選定為array 
         Topic1.classList.remove("topicSelectored");
-        click1--;
+        click1--; 
         console.log(Topic1.classList)
 
     } else if (Topic2.classList.value.includes("topicSelectored") && clickCount2 %2 === 0) {
@@ -113,6 +114,7 @@ function cacelTopic() {
 let TopicLimitText = document.getElementById("TopicLimitInfo")
 
 function TopicLimit() {
+    // 選擇超過兩個選 two more option error ! 
     if (TopicArray.length >= 2) {
         TopicLimitText.innerText = 'You can only choose 2 options';
         TopicArray.pop();
